@@ -37,9 +37,9 @@ public class FiksniBroj extends TelefonskiBroj{
         }
         return num;
     }
-    @Override
+    /*@Override
     public int hashCode(){
 
-    }
+    }*/
 
 };

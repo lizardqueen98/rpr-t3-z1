@@ -30,9 +30,9 @@ public class MobilniBroj extends TelefonskiBroj{
         }
         return num;
     }
-    @Override
+    /*@Override
     public int hashCode(){
 
-    }
+    }*/
 };
 
