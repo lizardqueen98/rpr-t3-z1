@@ -1,8 +1,5 @@
 package ba.unsa.etf.rpr.tutorijal03;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 //Static import is a feature introduced in the Java programming language that allows members (fields and methods) defined in a class as public static
 // to be used in Java code without specifying the class in which the field is defined.
 import static ba.unsa.etf.rpr.tutorijal03.FiksniBroj.Grad;
@@ -41,17 +38,25 @@ public class Imenik {
             }
         }
         return lista;
-    }/*
+    }
     public Set<String> izGrada(Grad g){
-        Set<String> s=new Set<String>();
+        Set<String> s=new TreeSet<>();
         for(HashMap.Entry<String,TelefonskiBroj> entry : mapa.entrySet()){
             if(entry.getValue() instanceof FiksniBroj){
-
+                FiksniBroj fb=(FiksniBroj) entry.getValue();
+                if(fb.ispisi().startsWith(g.getPozivni())) s.add(entry.getKey());
             }
         }
+        return s;
     }
     public Set<TelefonskiBroj> izGradaBrojevi(Grad g){
-
+        Set<TelefonskiBroj> s=new TreeSet<>();
+        for(HashMap.Entry<String,TelefonskiBroj> entry : mapa.entrySet()){
+            if(entry.getValue() instanceof FiksniBroj){
+                FiksniBroj fb=(FiksniBroj) entry.getValue();
+                if(fb.ispisi().startsWith(g.getPozivni())) s.add(entry.getValue());
+            }
+        }
+        return s;
     }
-*/
 }

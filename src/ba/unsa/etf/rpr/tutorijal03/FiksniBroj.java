@@ -8,7 +8,7 @@ public class FiksniBroj extends TelefonskiBroj{
     public enum Grad{
         SARAJEVO("033"),TUZLA("035"),ZENICA("032"),BIHAC("037"),ORASJE("031"),GORAZDE("038"),TRAVNIK("030"),MOSTAR("036"),SIROKI_BRIJEG("039"),LIVNO("034"),BRCKO("049");
         private String pozivni;
-        //konstruktor ne smije biti public
+        //The enum constructor must be either private or package scope (default). You cannot use public or protected constructors for a Java enum.
         Grad(String pozivni){
             this.pozivni=pozivni;
         }
