@@ -20,7 +20,7 @@ public class FiksniBroj extends TelefonskiBroj{
     }
     @Override
     public String ispisi(){
-        return grad.getPozivni()+broj;
+        return grad.getPozivni()+"/"+broj;
         /*String num=null;
         switch(grad) {
             case SARAJEVO: num = "033/"+broj;

@@ -7,6 +7,9 @@ public class Program {
     public static void main(String[] args) {
         Grad g = SARAJEVO;
         System.out.println(g.getPozivni());
+        int a =5;
+        String s=String.valueOf(a);
+        System.out.println(s);
 
     }
 }

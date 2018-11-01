@@ -27,13 +27,13 @@ public class Imenik {
         return ime;
     }
     public String naSlovo(char s){
-        String lista=null;
+        String lista=new String();
         String ime;
-        int brojac=1;
+        Integer brojac = 1;
         for(HashMap.Entry<String,TelefonskiBroj> entry : mapa.entrySet()){
             ime = entry.getKey();
             if(ime.charAt(0)==s){
-               lista+=brojac+". "+ime+entry.getValue()+"\n";
+               lista += brojac.toString() +". "+ime+" - "+entry.getValue().ispisi()+"\n";
                brojac++;
             }
         }
