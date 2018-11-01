@@ -10,30 +10,32 @@ public class FiksniBroj extends TelefonskiBroj{
     }
     @Override
     public String ispisi(){
+        String num=null;
         switch(grad) {
-            case SARAJEVO: return "033/"+broj;
+            case SARAJEVO: num = "033/"+broj;
             break;
-            case TUZLA: return "035/"+broj;
+            case TUZLA: num = "035/"+broj;
             break;
-            case ZENICA: return "032/"+broj;
+            case ZENICA: num = "032/"+broj;
             break;
-            case BIHAC: return "037/"+broj;
+            case BIHAC: num = "037/"+broj;
             break;
-            case ORASJE: return "031/"+broj;
+            case ORASJE: num = "031/"+broj;
             break;
-            case GORAZDE: return "038/"+broj;
+            case GORAZDE: num = "038/"+broj;
             break;
-            case TRAVNIK: return "030/"+broj;
+            case TRAVNIK: num = "030/"+broj;
             break;
-            case MOSTAR: return "036/"+broj;
+            case MOSTAR: num = "036/"+broj;
             break;
-            case SIROKI_BRIJEG: return "039/"+broj;
+            case SIROKI_BRIJEG: num = "039/"+broj;
             break;
-            case LIVNO: return "034/"+broj;
+            case LIVNO: num = "034/"+broj;
             break;
-            case BRCKO: return "049/"+broj;
+            case BRCKO: num = "049/"+broj;
             break;
         }
+        return num;
     }
     @Override
     public int hashCode(){
