@@ -8,6 +8,10 @@ public class MobilniBroj extends TelefonskiBroj{
         this.broj=broj;
     }
     @Override
+    public int compareTo(TelefonskiBroj tb){
+        return this.ispisi().compareTo(tb.ispisi());
+    }
+    @Override
     public String ispisi(){
         String num=null;
         switch(mobilnaMreza){

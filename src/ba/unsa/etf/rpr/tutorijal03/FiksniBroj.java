@@ -1,6 +1,6 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
-public class FiksniBroj extends TelefonskiBroj{
+public class FiksniBroj extends TelefonskiBroj{ //implements Comparable<TelefonskiBroj>{
     private String broj;
     private Grad grad;
     //Nested enum types are implicitly static. It is permissible to explicitly declare a nested enum type to be static.
@@ -14,6 +14,10 @@ public class FiksniBroj extends TelefonskiBroj{
         }
         public String getPozivni(){return pozivni;}
     };
+    @Override
+    public int compareTo(TelefonskiBroj tb){
+        return this.ispisi().compareTo(tb.ispisi());
+    }
     public FiksniBroj(Grad grad, String broj){
         this.grad=grad;
         this.broj=broj;

@@ -7,6 +7,10 @@ public class MedunarodniBroj extends TelefonskiBroj{
         this.broj=broj;
     }
     @Override
+    public int compareTo(TelefonskiBroj tb){
+        return this.ispisi().compareTo(tb.ispisi());
+    }
+    @Override
     public String ispisi(){
         return drzava+broj;
     }
