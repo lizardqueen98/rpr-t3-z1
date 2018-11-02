@@ -8,7 +8,18 @@ import static ba.unsa.etf.rpr.tutorijal03.FiksniBroj.Grad.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ImenikTest {
-
+    @Test
+    void dajBroj(){
+        Imenik imenik =new Imenik();
+        imenik.dodaj("Nadija Borovina", new MobilniBroj(62,"119-900"));
+        assertEquals("062/119-900",imenik.dajBroj("Nadija Borovina"));
+    }
+    @Test
+    void dajIme(){
+        Imenik imenik =new Imenik();
+        imenik.dodaj("Nadija Borovina", new MobilniBroj(62,"119-900"));
+        assertEquals("Nadija Borovina",imenik.dajIme(new MobilniBroj(62,"119-900")));
+    }
     @Test
     void dodaj() {
         Imenik imenik = new Imenik();

@@ -14,16 +14,14 @@ public class Imenik {
         return mapa.get(ime).ispisi();
     }
     public String dajIme(TelefonskiBroj broj){
-        String ime=null;
-        if(mapa.containsValue(broj)){
+        String ime=new String();
             //entrySet() vraca set: Set<Map.Entry<K,V>>; krecemo se kroz taj set rangovskom for petljom
             //preko seta mozemo mijenjati mapu
            for(HashMap.Entry<String,TelefonskiBroj> entry : mapa.entrySet()){
                ime = entry.getKey();
                TelefonskiBroj br=entry.getValue();
-               if(broj==br) break;
+               if(broj.compareTo(br)==0) break;
            }
-        }
         return ime;
     }
     public String naSlovo(char s){

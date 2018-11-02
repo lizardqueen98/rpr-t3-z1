@@ -13,7 +13,7 @@ public class MobilniBroj extends TelefonskiBroj{
     }
     @Override
     public String ispisi(){
-        String num=null;
+        String num=new String();
         switch(mobilnaMreza){
             case 60: num = "060/"+broj;
             break;
